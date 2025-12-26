@@ -425,8 +425,8 @@ const App = () => {
               </p>
             </div>
             <div className="contact-actions">
-              <a className="btn primary" href="mailto:ttoumi@student.fontys.nl">
-                ttoumi@student.fontys.nl
+              <a className="btn primary" href="mailto:noah.blake.rhodes@gmail.com">
+                noah.blake.rhodes@gmail.com
               </a>
               <a className="btn ghost" href="tel:+31632819070">
                 +31 6 32819070
