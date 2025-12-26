@@ -54,7 +54,7 @@ const App = () => {
 
       <header className="site-header" ref={headerRef}>
         <div className="container header-inner">
-          <div className="logo">Noah Rhodes</div>
+          <div className="logo">Noah Blake Toumi</div>
           <nav className="nav" aria-label="Primary">
             <a href="#work">Work</a>
             <a href="#process">Process</a>
@@ -62,7 +62,7 @@ const App = () => {
             <a href="#contact">Contact</a>
           </nav>
           <a className="btn ghost" href="#contact">
-            Book a consult
+            Let&apos;s connect
           </a>
         </div>
       </header>
@@ -71,15 +71,15 @@ const App = () => {
         <section className="hero">
           <div className="container hero-grid">
             <div className="hero-copy">
-              <p className="eyebrow">UX Designer + Product Strategist</p>
-              <h1>
-                Designing calm, confident experiences that help people move fast
-                and feel safe.
-              </h1>
+              <p className="eyebrow">UX Designer + Front-End</p>
+              <h1>Designing accessible, confident experiences that feel calm and human.</h1>
               <p className="lead">
-                I partner with teams to turn complex systems into friendly,
-                responsive products. From discovery through delivery, I focus on
-                clarity, craft, and accessibility.
+                Media Design student focused on UI/UX and front-end development. I
+                blend research, prototyping, and accessible UI to build products
+                that reduce friction and build trust.
+              </p>
+              <p className="note">
+                Currently transitioning my professional name to Noah Rhodes.
               </p>
               <div className="hero-actions">
                 <a className="btn primary" href="#work">
@@ -90,34 +90,34 @@ const App = () => {
                 </a>
               </div>
               <ul className="hero-tags">
-                <li>Research-led</li>
-                <li>Systems thinking</li>
-                <li>Design to dev</li>
+                <li>Accessibility research</li>
+                <li>React + UI</li>
+                <li>3D web experiments</li>
               </ul>
             </div>
             <div className="hero-card">
               <div className="hero-card-header">
-                <span className="pill">Currently</span>
+                <span className="pill">Internship</span>
                 <span className="status-dot" aria-hidden="true"></span>
-                <span className="subtle">Open to select collaborations</span>
+                <span className="subtle">Philips | Health tech</span>
               </div>
-              <h2>Unifying a multi-product platform into one cohesive experience.</h2>
+              <h2>Reimagining onboarding for connected care.</h2>
               <p>
-                Leading UX for a scalable design system and cross-platform IA
-                that keeps enterprise workflows steady and human.
+                Mapped patient and clinician journeys to reduce setup friction
+                and designed accessible flows for a pilot concept.
               </p>
               <div className="hero-card-meta">
                 <div>
                   <span className="meta-label">Focus</span>
-                  <span className="meta-value">Navigation, workflow, handoff</span>
+                  <span className="meta-value">Onboarding, accessibility</span>
                 </div>
                 <div>
                   <span className="meta-label">Tools</span>
-                  <span className="meta-value">Figma, FigJam, Maze</span>
+                  <span className="meta-value">Figma, FigJam, testing</span>
                 </div>
               </div>
-              <a className="text-link" href="#work">
-                See featured work
+              <a className="text-link" href="#project-archive">
+                See internship overview
               </a>
             </div>
           </div>
@@ -125,13 +125,13 @@ const App = () => {
 
         <section className="clients section reveal" style={{ '--delay': '0ms' }}>
           <div className="container">
-            <p className="eyebrow">Trusted by teams</p>
+            <p className="eyebrow">Collaborated with</p>
             <div className="client-row">
-              <span>Urban Mobility Lab</span>
-              <span>Harbor Health</span>
-              <span>Northwind Logistics</span>
-              <span>Brightleaf Finance</span>
-              <span>Atlas Education</span>
+              <span>Philips</span>
+              <span>Fontys</span>
+              <span>Studio Krom</span>
+              <span>Studio Myo</span>
+              <span>Independent</span>
             </div>
           </div>
         </section>
@@ -141,116 +141,78 @@ const App = () => {
             <div className="section-head">
               <div>
                 <p className="eyebrow">Featured work</p>
-                <h2>Case studies that blend clarity, warmth, and a little edge.</h2>
+                <h2>Two case studies, fully built and ready to share.</h2>
               </div>
               <p className="lead">
-                Each project highlights how I bring structure to messy problems
-                while keeping the interface simple and accessible.
+                Deep dives into accessibility and brand systems with a focus on
+                clarity, craft, and measurable outcomes.
               </p>
             </div>
 
             <div className="project-grid">
-              <article
-                className="project-card feature reveal"
-                style={{ '--delay': '0ms' }}
-              >
+              <article className="project-card reveal" style={{ '--delay': '0ms' }}>
                 <div
                   className="project-cover cover-1"
                   role="img"
-                  aria-label="Abstract blue and teal gradient with grid texture"
+                  aria-label="Soft pink gradient"
                 ></div>
                 <div className="project-body">
                   <div className="project-tags">
-                    <span className="tag">Mobile + Web</span>
-                    <span className="tag">Transit</span>
+                    <span className="tag">Accessibility</span>
+                    <span className="tag">Chrome Extension</span>
+                    <span className="tag">Research</span>
                   </div>
-                  <h3>CityPulse Mobility</h3>
+                  <h3>Digital Accessibility ? Studio Krom</h3>
                   <p>
-                    Reimagined the trip planner to make route decisions faster
-                    for everyday riders, reducing cognitive load and improving
-                    clarity across disruptions.
+                    Researched ADHD accessibility needs and designed a browser
+                    extension that improves focus, readability, and user control.
                   </p>
                   <div className="project-meta">
                     <div>
                       <span className="meta-label">Role</span>
-                      <span className="meta-value">Lead UX</span>
+                      <span className="meta-value">UX Research + UI Design</span>
                     </div>
                     <div>
                       <span className="meta-label">Deliverables</span>
                       <span className="meta-value">
-                        Journey maps, prototyping, testing
+                        Research synthesis, wireframes, React prototype
                       </span>
                     </div>
                   </div>
-                  <a className="text-link" href="#project-archive">
-                    View case study
+                  <a className="text-link" href="#contact">
+                    Request case study
                   </a>
                 </div>
               </article>
 
-              <article className="project-card reveal" style={{ '--delay': '60ms' }}>
+              <article className="project-card reveal" style={{ '--delay': '80ms' }}>
                 <div
                   className="project-cover cover-2"
                   role="img"
-                  aria-label="Warm coral and sand gradient"
+                  aria-label="Warm blush gradient"
                 ></div>
                 <div className="project-body">
                   <div className="project-tags">
-                    <span className="tag">SaaS</span>
-                    <span className="tag">B2B</span>
+                    <span className="tag">Brand system</span>
+                    <span className="tag">3D design</span>
                   </div>
-                  <h3>Freightline Console</h3>
+                  <h3>Branding Project ? Studio Myo</h3>
                   <p>
-                    Created a dashboard for logistics teams that turns dense
-                    operational data into a calm, glanceable command center.
+                    Built a corporate identity and visual system, extending it
+                    into 3D assets for digital touchpoints and storytelling.
                   </p>
-                  <a className="text-link" href="#project-archive">
-                    View case study
-                  </a>
-                </div>
-              </article>
-
-              <article className="project-card reveal" style={{ '--delay': '120ms' }}>
-                <div
-                  className="project-cover cover-3"
-                  role="img"
-                  aria-label="Soft mint and navy gradient"
-                ></div>
-                <div className="project-body">
-                  <div className="project-tags">
-                    <span className="tag">Fintech</span>
-                    <span className="tag">Mobile</span>
+                  <div className="project-meta">
+                    <div>
+                      <span className="meta-label">Role</span>
+                      <span className="meta-value">Brand + UX Design</span>
+                    </div>
+                    <div>
+                      <span className="meta-label">Deliverables</span>
+                      <span className="meta-value">Logo, guidelines, 3D assets</span>
+                    </div>
                   </div>
-                  <h3>Sprout Savings</h3>
-                  <p>
-                    Designed a guided onboarding flow for first-time investors
-                    with clear, friendly risk education and optional guardrails.
-                  </p>
-                  <a className="text-link" href="#project-archive">
-                    View case study
-                  </a>
-                </div>
-              </article>
-
-              <article className="project-card reveal" style={{ '--delay': '180ms' }}>
-                <div
-                  className="project-cover cover-4"
-                  role="img"
-                  aria-label="Deep blue and amber gradient"
-                ></div>
-                <div className="project-body">
-                  <div className="project-tags">
-                    <span className="tag">Healthcare</span>
-                    <span className="tag">Service design</span>
-                  </div>
-                  <h3>Beacon Patient Hub</h3>
-                  <p>
-                    Aligned care team workflows with patient expectations,
-                    creating a unified portal for appointments, results, and
-                    messaging.
-                  </p>
-                  <a className="text-link" href="#project-archive">
-                    View case study
+                  <a className="text-link" href="#contact">
+                    Request case study
                   </a>
                 </div>
               </article>
@@ -267,7 +229,7 @@ const App = () => {
             <div className="section-head">
               <div>
                 <p className="eyebrow">Process</p>
-                <h2>Intentional, collaborative, and grounded in evidence.</h2>
+                <h2>Structured, collaborative, and grounded in evidence.</h2>
               </div>
               <p className="lead">
                 I keep teams aligned with lightweight rituals and clear
@@ -279,32 +241,32 @@ const App = () => {
                 <span className="step">01</span>
                 <h3>Discover</h3>
                 <p>
-                  Stakeholder interviews, analytics review, and competitive
-                  audits to understand constraints and opportunities.
+                  Stakeholder interviews, accessibility audits, and competitive
+                  scans to understand constraints and opportunities.
                 </p>
               </div>
               <div className="process-card">
                 <span className="step">02</span>
-                <h3>Define</h3>
+                <h3>Frame</h3>
                 <p>
-                  Problem framing, JTBD, and prioritized journeys to focus the
-                  roadmap on what matters most.
+                  Problem statements, personas, and journey maps to align on the
+                  strongest outcomes.
                 </p>
               </div>
               <div className="process-card">
                 <span className="step">03</span>
-                <h3>Design</h3>
+                <h3>Prototype</h3>
                 <p>
-                  Low-fidelity flows, interactive prototypes, and systems-first
-                  UI to keep experiences coherent.
+                  Wireframes to hi-fi flows and interactive prototypes that are
+                  ready for feedback.
                 </p>
               </div>
               <div className="process-card">
                 <span className="step">04</span>
                 <h3>Validate</h3>
                 <p>
-                  Usability testing, accessibility checks, and iteration notes
-                  that guide the build phase.
+                  Usability testing, iteration notes, and handoff to keep
+                  delivery smooth.
                 </p>
               </div>
             </div>
@@ -317,34 +279,40 @@ const App = () => {
               <p className="eyebrow">About</p>
               <h2>Designing for people first, platforms second.</h2>
               <p className="lead">
-                I blend research rigor with bold visual systems to make
-                complicated workflows feel approachable. I care deeply about
-                inclusive design, clear hierarchy, and practical handoff.
+                Media Design student at Fontys University of Applied Sciences in
+                Eindhoven, focused on UX/UI, accessibility research, and
+                front-end development.
               </p>
               <ul className="about-list">
-                <li>Accessibility-first layouts, tested with real assistive workflows.</li>
-                <li>Visual systems that scale across teams and products.</li>
-                <li>Workshops that turn ambiguity into shared direction.</li>
+                <li>Accessibility-first design, including ADHD-friendly interfaces.</li>
+                <li>Wireframing, prototyping, and user testing with clear documentation.</li>
+                <li>Front-end builds in React and experiments with 3D web experiences.</li>
               </ul>
             </div>
             <div className="about-cards">
               <div className="mini-card">
                 <h3>Core skills</h3>
                 <div className="tag-list">
-                  <span className="tag">User research</span>
-                  <span className="tag">IA + flows</span>
+                  <span className="tag">Figma</span>
+                  <span className="tag">Wireframing</span>
                   <span className="tag">Prototyping</span>
-                  <span className="tag">Design systems</span>
-                  <span className="tag">Workshop facilitation</span>
+                  <span className="tag">UX research</span>
+                  <span className="tag">UI design</span>
                   <span className="tag">Accessibility</span>
+                  <span className="tag">React</span>
+                  <span className="tag">JavaScript</span>
+                  <span className="tag">User testing</span>
+                  <span className="tag">HTML/CSS</span>
+                  <span className="tag">Chrome extensions</span>
+                  <span className="tag">Three.js</span>
                 </div>
               </div>
               <div className="mini-card">
-                <h3>Design principles</h3>
+                <h3>Education</h3>
                 <ul className="principles">
-                  <li>Reduce friction before adding features.</li>
-                  <li>Make states visible and predictable.</li>
-                  <li>Build trust through clarity and tone.</li>
+                  <li>Associate Degree, Media Design ? Fontys (present)</li>
+                  <li>Propedeuse HBO Media Design ? Fontys (2019)</li>
+                  <li>HAVO ? Comenius Lyceum Amsterdam (2018)</li>
                 </ul>
               </div>
             </div>
@@ -359,11 +327,11 @@ const App = () => {
           <div className="container">
             <div className="section-head">
               <div>
-                <p className="eyebrow">Archive</p>
-                <h2>More work across product categories.</h2>
+                <p className="eyebrow">Additional work</p>
+                <h2>Other projects and internship highlights.</h2>
               </div>
               <p className="lead">
-                A quick look at other projects, partnerships, and experiments.
+                Smaller builds and collaborations that round out my case studies.
               </p>
             </div>
             <div className="table-wrap">
@@ -378,28 +346,22 @@ const App = () => {
                 </thead>
                 <tbody>
                   <tr>
-                    <td>PulsePay Kiosk</td>
-                    <td>Retail self-service UX</td>
-                    <td>Lead Designer</td>
+                    <td>Philips Internship Project</td>
+                    <td>Connected care onboarding concept</td>
+                    <td>UX Design Intern</td>
                     <td>2024</td>
                   </tr>
                   <tr>
-                    <td>HarborCare App</td>
-                    <td>Telehealth onboarding</td>
-                    <td>UX + UI</td>
-                    <td>2023</td>
+                    <td>Portfolio Website Development</td>
+                    <td>React + 3D web experience</td>
+                    <td>UX + Front-End</td>
+                    <td>2025</td>
                   </tr>
                   <tr>
-                    <td>Atlas Learn</td>
-                    <td>Curriculum builder</td>
-                    <td>Product Strategy</td>
-                    <td>2023</td>
-                  </tr>
-                  <tr>
-                    <td>Northwind Ops</td>
-                    <td>Operational dashboards</td>
-                    <td>Design Systems</td>
-                    <td>2022</td>
+                    <td>Todo List Application</td>
+                    <td>React app with API + state</td>
+                    <td>Front-End</td>
+                    <td>2025</td>
                   </tr>
                 </tbody>
               </table>
@@ -411,21 +373,18 @@ const App = () => {
           <div className="container contact-card">
             <div>
               <p className="eyebrow">Contact</p>
-              <h2>Let&apos;s build something people want to use.</h2>
+              <h2>Let&apos;s build something accessible.</h2>
               <p className="lead">
-                Email me or schedule a call. I respond within two business days.
+                Based in Eindhoven, NL. Available for internships and junior UX
+                roles.
               </p>
             </div>
             <div className="contact-actions">
-              <a className="btn primary" href="mailto:noah.blake.rhodes@gmail.com">
-                noah.blake.rhodes@gmail.com
+              <a className="btn primary" href="mailto:ttoumi@student.fontys.nl">
+                ttoumi@student.fontys.nl
               </a>
-              <a
-                className="btn ghost"
-                href="https://calendly.com/"
-                aria-label="Schedule a call on Calendly"
-              >
-                Schedule a call
+              <a className="btn ghost" href="tel:+31632819070">
+                +31 6 32819070
               </a>
             </div>
           </div>
@@ -435,8 +394,8 @@ const App = () => {
       <footer className="footer">
         <div className="container footer-inner">
           <div>
-            <div className="logo">Noah Rhodes</div>
-            <p>UX designer helping teams build accessible, beautiful products.</p>
+            <div className="logo">Noah Blake Toumi</div>
+            <p>UX designer focused on accessibility and thoughtful front-end craft.</p>
           </div>
           <div className="footer-links">
             <a href="https://www.linkedin.com" aria-label="LinkedIn">
@@ -445,13 +404,13 @@ const App = () => {
             <a href="https://www.behance.net" aria-label="Behance">
               Behance
             </a>
-            <a href="https://www.dribbble.com" aria-label="Dribbble">
-              Dribbble
+            <a href="https://github.com" aria-label="GitHub">
+              GitHub
             </a>
           </div>
           <div className="footer-meta">
-            <span>Based in Boston, MA</span>
-            <span>Available for remote work</span>
+            <span>Eindhoven, Netherlands</span>
+            <span>Open to internships and junior roles</span>
           </div>
         </div>
       </footer>

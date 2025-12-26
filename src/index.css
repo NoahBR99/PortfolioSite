@@ -4,9 +4,9 @@
   --muted: #5f6472;
   --surface: #ffffff;
   --surface-alt: #f0f2f8;
-  --accent: #2d5bff;
-  --accent-2: #00b3a4;
-  --accent-3: #ff6b4a;
+  --accent: #c01863;
+  --accent-2: #ff7aa8;
+  --accent-3: #ffb287;
   --line: #d9dde6;
   --radius-lg: 24px;
   --radius-md: 16px;
@@ -42,9 +42,9 @@ body::before {
   inset: 0;
   z-index: -2;
   background:
-    radial-gradient(circle at 10% 10%, rgba(45, 91, 255, 0.15), transparent 45%),
-    radial-gradient(circle at 90% 20%, rgba(0, 179, 164, 0.12), transparent 40%),
-    radial-gradient(circle at 50% 80%, rgba(255, 107, 74, 0.12), transparent 45%),
+    radial-gradient(circle at 10% 10%, rgba(192, 24, 99, 0.18), transparent 45%),
+    radial-gradient(circle at 90% 20%, rgba(255, 122, 168, 0.14), transparent 40%),
+    radial-gradient(circle at 50% 80%, rgba(255, 178, 135, 0.14), transparent 45%),
     linear-gradient(135deg, rgba(255, 255, 255, 0.85), rgba(246, 243, 238, 0.95));
 }
 
@@ -66,7 +66,7 @@ a {
 
 a:focus-visible,
 .btn:focus-visible {
-  outline: 3px solid rgba(45, 91, 255, 0.4);
+  outline: 3px solid rgba(192, 24, 99, 0.4);
   outline-offset: 3px;
 }
 
@@ -89,6 +89,12 @@ p {
 
 .lead {
   font-size: 1.1rem;
+  color: var(--muted);
+}
+
+.note {
+  margin: 0 0 1.5rem;
+  font-size: 0.95rem;
   color: var(--muted);
 }
 
@@ -365,7 +371,7 @@ body.loaded .hero-card {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
 }
 
@@ -408,19 +414,19 @@ body.loaded .hero-card {
 }
 
 .cover-1 {
-  background: linear-gradient(140deg, rgba(45, 91, 255, 0.9), rgba(0, 179, 164, 0.9));
+  background: linear-gradient(140deg, rgba(192, 24, 99, 0.9), rgba(255, 122, 168, 0.9));
 }
 
 .cover-2 {
-  background: linear-gradient(140deg, rgba(255, 107, 74, 0.9), rgba(245, 205, 145, 0.9));
+  background: linear-gradient(140deg, rgba(255, 122, 168, 0.9), rgba(255, 178, 135, 0.9));
 }
 
 .cover-3 {
-  background: linear-gradient(140deg, rgba(0, 179, 164, 0.9), rgba(15, 17, 26, 0.85));
+  background: linear-gradient(140deg, rgba(192, 24, 99, 0.85), rgba(15, 17, 26, 0.9));
 }
 
 .cover-4 {
-  background: linear-gradient(140deg, rgba(15, 17, 26, 0.95), rgba(255, 177, 100, 0.9));
+  background: linear-gradient(140deg, rgba(15, 17, 26, 0.95), rgba(255, 178, 135, 0.9));
 }
 
 .project-body {
@@ -439,7 +445,7 @@ body.loaded .hero-card {
 .tag {
   padding: 6px 12px;
   border-radius: 999px;
-  background: rgba(45, 91, 255, 0.1);
+  background: rgba(192, 24, 99, 0.12);
   color: var(--ink);
   font-size: 0.78rem;
   font-weight: 600;
@@ -662,6 +668,10 @@ body.loaded .hero-card {
 }
 
 @media (max-width: 900px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
   .project-card.feature {
     grid-template-columns: 1fr;
   }
