@@ -420,8 +420,7 @@ const App = () => {
               <p className="eyebrow">Contact</p>
               <h2>Let&apos;s build something accessible.</h2>
               <p className="lead">
-                Based in Eindhoven, NL. Available for internships and junior UX
-                roles.
+                Based in Eindhoven, NL. Available for junior UX roles.
               </p>
             </div>
             <div className="contact-actions">
@@ -455,7 +454,7 @@ const App = () => {
           </div>
           <div className="footer-meta">
             <span>Eindhoven, Netherlands</span>
-            <span>Open to internships and junior roles</span>
+            <span>Open to junior UX roles</span>
           </div>
         </div>
       </footer>
