@@ -95,7 +95,7 @@ const App = () => {
 
       <header className="site-header" ref={headerRef}>
         <div className="container header-inner">
-          <div className="logo">Noah Blake Toumi</div>
+          <div className="logo">Noah B.</div>
           <nav className="nav" aria-label="Primary">
             <a href="#work">Work</a>
             <a href="#process">Process</a>
@@ -438,7 +438,7 @@ const App = () => {
       <footer className="footer">
         <div className="container footer-inner">
           <div>
-            <div className="logo">Noah Blake Toumi</div>
+            <div className="logo">Noah B.</div>
             <p>UX designer focused on accessibility and thoughtful front-end craft.</p>
           </div>
           <div className="footer-links">
