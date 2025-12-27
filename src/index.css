@@ -773,6 +773,10 @@ body.loaded .hero-copy {
 }
 
 @media (max-width: 900px) {
+  .site-header {
+    padding-top: max(8px, env(safe-area-inset-top));
+  }
+
   .header-inner {
     display: grid;
     grid-template-columns: auto 1fr auto;
@@ -782,6 +786,8 @@ body.loaded .hero-copy {
       "panel panel panel";
     align-items: center;
     gap: 12px 16px;
+    padding-top: 20px;
+    padding-bottom: 12px;
   }
 
   .logo {
