@@ -576,6 +576,85 @@ body.loaded .hero-copy {
   transform: translateX(4px);
 }
 
+.work-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 32px;
+  align-items: center;
+}
+
+.work-hero-card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: 0 12px 26px rgba(15, 17, 26, 0.08);
+}
+
+.work-hero-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.work-detail-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 28px;
+  align-items: start;
+  margin-bottom: 24px;
+}
+
+.work-meta {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  display: grid;
+  gap: 12px;
+}
+
+.work-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.work-detail-card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  box-shadow: 0 10px 24px rgba(15, 17, 26, 0.08);
+}
+
+.work-detail-card h3 {
+  margin-bottom: 10px;
+}
+
+.work-detail-card ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+.work-detail-cta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.work-note {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 12px;
+}
+
 .process-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -766,6 +845,15 @@ body.loaded .hero-copy {
   .project-card.feature {
     grid-column: span 2;
   }
+
+  .work-hero-grid,
+  .work-detail-header {
+    grid-template-columns: 1fr;
+  }
+
+  .work-detail-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 900px) {
@@ -855,6 +943,10 @@ body.loaded .hero-copy {
     min-height: 220px;
   }
 
+  .work-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
   .process-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -915,6 +1007,12 @@ body.loaded .hero-copy {
 
   .project-cover {
     height: 160px;
+  }
+
+  .work-hero-card,
+  .work-detail-card,
+  .work-meta {
+    padding: 18px;
   }
 
   .process-grid {
