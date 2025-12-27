@@ -1,7 +1,27 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const App = () => {
   const headerRef = useRef(null);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen((prev) => !prev);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 900) {
+        setMenuOpen(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia(
@@ -96,15 +116,45 @@ const App = () => {
       <header className="site-header" ref={headerRef}>
         <div className="container header-inner">
           <div className="logo">Noah B.</div>
-          <nav className="nav" aria-label="Primary">
-            <a href="#work">Work</a>
-            <a href="#process">Process</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-          </nav>
-          <a className="btn ghost" href="#contact">
-            Let&apos;s connect
-          </a>
+          <div className="nav-group">
+            <button
+              className={`nav-toggle ${menuOpen ? 'is-open' : ''}`}
+              type="button"
+              aria-expanded={menuOpen}
+              aria-controls="primary-nav"
+              onClick={toggleMenu}
+            >
+              <span className="sr-only">Toggle navigation</span>
+              <span className="nav-toggle-label">Menu</span>
+              <span className="nav-toggle-bars" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </button>
+            <div
+              className={`nav-panel ${menuOpen ? 'is-open' : ''}`}
+              id="primary-nav"
+            >
+              <nav className="nav" aria-label="Primary">
+                <a href="#work" onClick={closeMenu}>
+                  Work
+                </a>
+                <a href="#process" onClick={closeMenu}>
+                  Process
+                </a>
+                <a href="#about" onClick={closeMenu}>
+                  About
+                </a>
+                <a href="#contact" onClick={closeMenu}>
+                  Contact
+                </a>
+              </nav>
+              <a className="btn ghost nav-cta" href="#contact" onClick={closeMenu}>
+                Let&apos;s connect
+              </a>
+            </div>
+          </div>
         </div>
       </header>
 
