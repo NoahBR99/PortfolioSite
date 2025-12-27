@@ -771,9 +771,10 @@ body.loaded .hero-copy {
 @media (max-width: 900px) {
   .header-inner {
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    grid-template-columns: auto 1fr auto;
     grid-template-areas:
-      "toggle logo cta"
+      "toggle logo toggle"
+      "cta cta cta"
       "panel panel panel";
     align-items: center;
     gap: 12px 16px;
@@ -794,9 +795,13 @@ body.loaded .hero-copy {
     justify-self: start;
   }
 
+  .nav-toggle.is-open {
+    justify-self: end;
+  }
+
   .nav-cta {
     grid-area: cta;
-    justify-self: end;
+    justify-self: center;
   }
 
   .nav-panel {

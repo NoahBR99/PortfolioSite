@@ -132,9 +132,6 @@ const App = () => {
                 <span></span>
               </span>
             </button>
-            <a className="btn ghost nav-cta" href="#contact">
-              Let&apos;s connect
-            </a>
             <div
               className={`nav-panel ${menuOpen ? 'is-open' : ''}`}
               id="primary-nav"
@@ -154,6 +151,9 @@ const App = () => {
                 </a>
               </nav>
             </div>
+            <a className="btn ghost nav-cta" href="#contact">
+              Let&apos;s connect
+            </a>
           </div>
         </div>
       </header>
