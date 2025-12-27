@@ -252,6 +252,7 @@ const App = () => {
                     <span className="tag">Accessibility</span>
                     <span className="tag">Chrome Extension</span>
                     <span className="tag">Research</span>
+                    <span className="tag">Front-End</span>
                   </div>
                   <h3>Digital Accessibility - Studio Krom</h3>
                   <p>
@@ -261,12 +262,12 @@ const App = () => {
                   <div className="project-meta">
                     <div>
                       <span className="meta-label">Role</span>
-                      <span className="meta-value">UX Research + UI Design</span>
+                      <span className="meta-value">UX + UI + Front-End</span>
                     </div>
                     <div>
                       <span className="meta-label">Deliverables</span>
                       <span className="meta-value">
-                        Research synthesis, wireframes, React prototype
+                        Research synthesis, UI design, React build
                       </span>
                     </div>
                   </div>
