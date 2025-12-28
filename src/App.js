@@ -663,9 +663,6 @@ const App = () => {
                 <span></span>
               </span>
             </button>
-            <Link className="btn ghost nav-cta" to="/#contact" onClick={closeMenu}>
-              Let&apos;s connect
-            </Link>
             <div
               className={`nav-panel ${menuOpen ? 'is-open' : ''}`}
               id="primary-nav"
@@ -685,6 +682,9 @@ const App = () => {
                 </Link>
               </nav>
             </div>
+            <Link className="btn ghost nav-cta" to="/#contact" onClick={closeMenu}>
+              Let&apos;s connect
+            </Link>
           </div>
         </div>
       </header>
