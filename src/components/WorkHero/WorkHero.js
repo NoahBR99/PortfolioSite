@@ -9,16 +9,8 @@ const WorkHero = () => (
         <h1>Case studies with context, craft, and clarity.</h1>
         <p className="lead">
           Two in-depth projects showing how I approach accessibility,
-          onboarding, and front-end build quality.
+          product discovery, and front-end build quality.
         </p>
-        <div className="hero-actions">
-          <Link className="btn primary" to="/#contact">
-            Request full case study
-          </Link>
-          <Link className="btn ghost" to="/">
-            Back to home
-          </Link>
-        </div>
       </div>
       <div className="work-hero-card">
         <p className="eyebrow">What I deliver</p>

@@ -1,0 +1,97 @@
+.project-selector {
+  padding: 48px 0;
+}
+
+.project-selector-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.project-selector-controls {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-selector-btn {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.85);
+  padding: 8px;
+  border-radius: 999px;
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  --project-accent: var(--accent);
+  --project-accent-2: var(--accent-2);
+  --project-shadow: rgba(45, 91, 255, 0.2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-selector-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(15, 17, 26, 0.12);
+}
+
+.project-selector-btn.is-active {
+  background: linear-gradient(135deg, var(--project-accent), var(--project-accent-2));
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 14px 28px var(--project-shadow);
+}
+
+.project-selector-btn:focus-visible {
+  outline: 3px solid var(--project-accent);
+  outline-offset: 3px;
+}
+
+.project-selector-btn.project-studio-krom {
+  --project-accent: #e36c2f;
+  --project-accent-2: #ffb287;
+  --project-shadow: rgba(227, 108, 47, 0.25);
+}
+
+.project-selector-btn.project-philips {
+  --project-accent: #2f6fa8;
+  --project-accent-2: #7bb3e3;
+  --project-shadow: rgba(47, 111, 168, 0.25);
+}
+
+.project-selector-logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid rgba(15, 17, 26, 0.12);
+  background: rgba(255, 255, 255, 0.9);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.project-selector-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 700px) {
+  .project-selector-head {
+    align-items: center;
+  }
+
+  .project-selector-controls {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-selector-btn {
+    width: auto;
+  }
+}

@@ -12,8 +12,7 @@
 .hero-copy {
   max-width: 560px;
   opacity: 0;
-  transform: translateY(calc(20px + var(--hero-shift-soft)));
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transform: translateY(var(--hero-shift-soft));
   will-change: transform;
 }
 
@@ -21,26 +20,15 @@
   font-size: clamp(2.6rem, 4vw, 4.2rem);
 }
 
-.hero-tags {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding: 0;
-  margin: 0;
-}
-
-.hero-tags li {
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  padding: 6px 14px;
-  font-size: 0.85rem;
-  background: rgba(255, 255, 255, 0.7);
-}
 
 .hero-card {
+  --hero-border: rgba(192, 24, 99, 0.6);
+  --hero-border-2: rgba(255, 122, 168, 0.6);
+  --hero-glow: rgba(192, 24, 99, 0.12);
+  --hero-dot: var(--accent-2);
+  --hero-dot-glow: rgba(255, 122, 168, 0.2);
   background: linear-gradient(#fff, #fff) padding-box,
-    linear-gradient(135deg, rgba(192, 24, 99, 0.6), rgba(255, 122, 168, 0.6))
+    linear-gradient(135deg, var(--hero-border), var(--hero-border-2))
       border-box;
   border: 1px solid transparent;
   border-radius: var(--radius-lg);
@@ -49,8 +37,7 @@
   position: relative;
   overflow: hidden;
   opacity: 0;
-  transform: translateY(calc(20px + var(--hero-shift)));
-  transition: opacity 0.8s ease 0.15s, transform 0.8s ease 0.15s;
+  transform: translateY(var(--hero-shift));
   will-change: transform;
 }
 
@@ -58,7 +45,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top right, rgba(192, 24, 99, 0.12), transparent 50%);
+  background: radial-gradient(circle at top right, var(--hero-glow), transparent 50%);
   pointer-events: none;
 }
 
@@ -87,8 +74,16 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--accent-2);
-  box-shadow: 0 0 0 6px rgba(255, 122, 168, 0.2);
+  background: var(--hero-dot);
+  box-shadow: 0 0 0 6px var(--hero-dot-glow);
+}
+
+.hero-card--philips {
+  --hero-border: rgba(47, 111, 168, 0.7);
+  --hero-border-2: rgba(123, 179, 227, 0.7);
+  --hero-glow: rgba(47, 111, 168, 0.16);
+  --hero-dot: #2f6fa8;
+  --hero-dot-glow: rgba(47, 111, 168, 0.2);
 }
 
 .subtle {
@@ -101,16 +96,6 @@
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 16px;
   margin: 20px 0 24px;
-}
-
-body.loaded .hero-copy,
-body.loaded .hero-card {
-  opacity: 1;
-  transform: translateY(var(--hero-shift));
-}
-
-body.loaded .hero-copy {
-  transform: translateY(var(--hero-shift-soft));
 }
 
 @media (max-width: 1100px) {

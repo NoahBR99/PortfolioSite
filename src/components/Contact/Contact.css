@@ -1,12 +1,18 @@
+.contact .container {
+  padding: 0 32px;
+}
+
 .contact-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 40px;
+  padding: 56px;
   border-radius: var(--radius-lg);
   background: linear-gradient(135deg, rgba(45, 91, 255, 0.12), rgba(0, 179, 164, 0.1));
   border: 1px solid rgba(45, 91, 255, 0.2);
+  max-width: 980px;
+  margin: 0 auto;
 }
 
 .contact-actions {
@@ -23,8 +29,21 @@
 }
 
 @media (max-width: 600px) {
+  .contact .container {
+    padding: 0 20px;
+  }
+
   .contact-card {
-    padding: 28px;
-    margin: 0 6px;
+    padding: 40px;
+  }
+}
+
+@media (min-width: 901px) {
+  .contact .container {
+    padding: 0 48px;
+  }
+
+  .contact-card {
+    padding: 72px;
   }
 }

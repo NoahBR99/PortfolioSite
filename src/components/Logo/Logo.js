@@ -3,7 +3,7 @@ import './Logo.css';
 
 const Logo = ({ onClick }) => (
   <Link className="logo" to="/" onClick={onClick}>
-    Noah B.
+    Noah Blake
   </Link>
 );
 

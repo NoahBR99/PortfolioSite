@@ -3,7 +3,7 @@ import './About.css';
 const About = () => (
   <section id="about" className="section about section-cream reveal" style={{ '--delay': '0ms' }}>
     <div className="container about-grid">
-      <div>
+      <div className="about-copy">
         <p className="eyebrow">About</p>
         <h2>Designing for people first, platforms second.</h2>
         <p className="lead">
@@ -18,7 +18,7 @@ const About = () => (
         </ul>
       </div>
       <div className="about-cards">
-        <div className="mini-card">
+        <div className="mini-card skills-card">
           <h3>Core skills</h3>
           <div className="tag-list">
             <span className="tag">Figma</span>
@@ -37,10 +37,36 @@ const About = () => (
         </div>
         <div className="mini-card">
           <h3>Education</h3>
-          <ul className="principles">
-            <li>Associate Degree, Media Design - Fontys University of Applied Sciences</li>
-            <li>Propedeuse HBO Media Design - Fontys (2019)</li>
-            <li>HAVO - Comenius Lyceum Amsterdam (2018)</li>
+          <ul className="education-list">
+            <li>
+              <span className="education-title">Associate Degree, Media Design</span>
+              <span className="education-meta">
+                Fontys University of Applied Sciences, Eindhoven
+              </span>
+            </li>
+            <li>
+              <span className="education-title">Propedeuse HBO ICT &amp; Media Design</span>
+              <span className="education-meta">
+                Fontys University of Applied Sciences, 2019
+              </span>
+            </li>
+            <li>
+              <span className="education-title">HAVO</span>
+              <span className="education-meta">Comenius Lyceum Amsterdam, 2018</span>
+            </li>
+          </ul>
+        </div>
+        <div className="mini-card">
+          <h3>Languages</h3>
+          <ul className="education-list">
+            <li>
+              <span className="education-title">Dutch</span>
+              <span className="education-meta">Moedertaal</span>
+            </li>
+            <li>
+              <span className="education-title">English</span>
+              <span className="education-meta">Fluent</span>
+            </li>
           </ul>
         </div>
       </div>

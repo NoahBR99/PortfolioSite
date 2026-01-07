@@ -1,5 +1,9 @@
 import { Link } from 'react-router-dom';
 import SectionHead from '../SectionHead/SectionHead';
+import kromBanner from '../../assets/images/Krom Banner.png';
+import philipsBanner from '../../assets/images/Philips Banner.png';
+import kromLogo from '../../assets/images/studiokrom_logo.png';
+import philipsLogo from '../../assets/images/philips_logo.jpg';
 import './FeaturedWork.css';
 
 const FeaturedWork = () => (
@@ -8,12 +12,55 @@ const FeaturedWork = () => (
       <SectionHead
         eyebrow="Featured work"
         title="Spotlight projects built for clarity and care."
-        lead="Two full case studies: an accessibility Chrome extension and a connected-care onboarding concept."
       />
 
       <div className="project-grid">
-        <article className="project-card reveal" style={{ '--delay': '0ms' }}>
-          <div className="project-cover cover-1" role="img" aria-label="Soft rose gradient"></div>
+        <Link
+          className="project-card project-card--philips reveal"
+          style={{ '--delay': '0ms' }}
+          to="/work#philips"
+          aria-label="View Philips case study"
+        >
+          <div className="project-cover cover-2">
+            <img src={philipsBanner} alt="Philips Myshop case study thumbnail" loading="lazy" />
+          </div>
+          <div className="project-body">
+            <div className="project-tags">
+              <span className="tag">Internship</span>
+              <span className="tag">E-commerce</span>
+              <span className="tag">Product discovery</span>
+            </div>
+            <h3 className="project-title">
+              <span className="project-logo" aria-hidden="true">
+                <img src={philipsLogo} alt="" />
+              </span>
+              <span>Philips</span>
+            </h3>
+            <div className="project-meta">
+              <div>
+                <span className="meta-label">Role</span>
+                <span className="meta-value">UX/UI Design Intern</span>
+              </div>
+              <div>
+                <span className="meta-label">Deliverables</span>
+                <span className="meta-value">
+                  Research synthesis, hi-fi prototype, usability plan
+                </span>
+              </div>
+            </div>
+            <span className="text-link">View case study</span>
+          </div>
+        </Link>
+
+        <Link
+          className="project-card project-card--krom reveal"
+          style={{ '--delay': '80ms' }}
+          to="/work#studio-krom"
+          aria-label="View Studio Krom case study"
+        >
+          <div className="project-cover cover-1">
+            <img src={kromBanner} alt="Studio Krom case study thumbnail" loading="lazy" />
+          </div>
           <div className="project-body">
             <div className="project-tags">
               <span className="tag">Accessibility</span>
@@ -21,11 +68,12 @@ const FeaturedWork = () => (
               <span className="tag">Research</span>
               <span className="tag">Front-End</span>
             </div>
-            <h3>Digital Accessibility - Studio Krom</h3>
-            <p>
-              Researched ADHD accessibility needs and designed a browser
-              extension that improves focus, readability, and user control.
-            </p>
+            <h3 className="project-title">
+              <span className="project-logo" aria-hidden="true">
+                <img src={kromLogo} alt="" />
+              </span>
+              <span>Studio Krom</span>
+            </h3>
             <div className="project-meta">
               <div>
                 <span className="meta-label">Role</span>
@@ -38,47 +86,9 @@ const FeaturedWork = () => (
                 </span>
               </div>
             </div>
-            <Link className="text-link" to="/work#studio-krom">
-              View case study
-            </Link>
+            <span className="text-link">View case study</span>
           </div>
-        </article>
-
-        <article className="project-card reveal" style={{ '--delay': '80ms' }}>
-          <div
-            className="project-cover cover-2"
-            role="img"
-            aria-label="Warm blush gradient with soft glow"
-          ></div>
-          <div className="project-body">
-            <div className="project-tags">
-              <span className="tag">Internship</span>
-              <span className="tag">Health tech</span>
-              <span className="tag">Onboarding</span>
-            </div>
-            <h3>Philips Connected Care</h3>
-            <p>
-              Designed onboarding and education flows for a connected care
-              concept, translating clinical needs into clear, accessible
-              steps.
-            </p>
-            <div className="project-meta">
-              <div>
-                <span className="meta-label">Role</span>
-                <span className="meta-value">UX Design Intern</span>
-              </div>
-              <div>
-                <span className="meta-label">Deliverables</span>
-                <span className="meta-value">
-                  Journey maps, wireframes, usability testing
-                </span>
-              </div>
-            </div>
-            <Link className="text-link" to="/work#philips">
-              View case study
-            </Link>
-          </div>
-        </article>
+        </Link>
       </div>
     </div>
   </section>

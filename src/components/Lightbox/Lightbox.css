@@ -26,16 +26,21 @@ body.lightbox-open {
   overflow: auto;
   background: rgba(255, 255, 255, 0.98);
   border-radius: var(--radius-lg);
-  padding: 40px 24px 24px;
+  padding: 20px 24px 24px;
   box-shadow: 0 28px 60px rgba(15, 17, 26, 0.3);
   display: grid;
   gap: 16px;
+  scrollbar-gutter: stable;
+}
+
+.lightbox-content.is-zoomable {
+  width: min(1200px, 96vw);
 }
 
 .lightbox-close {
-  position: absolute;
-  top: 20px;
-  right: 16px;
+  position: sticky;
+  top: 0;
+  right: 12px;
   border: none;
   background: transparent;
   border-radius: 0;
@@ -45,7 +50,8 @@ body.lightbox-open {
   display: grid;
   place-items: center;
   cursor: pointer;
-  transform: translateY(-50%);
+  justify-self: end;
+  z-index: 2;
 }
 
 .lightbox-close-icon {
@@ -93,9 +99,43 @@ body.lightbox-open {
 .lightbox-media img {
   width: 100%;
   height: auto;
-  max-height: 60vh;
+  max-width: 100%;
+  max-height: 70vh;
   object-fit: contain;
-  border-radius: calc(var(--radius-md) - 8px);
+  border-radius: calc(var(--radius-md) - 6px);
+  display: block;
+}
+
+.lightbox-media.is-zoomable img {
+  max-height: 82vh;
+  cursor: zoom-in;
+}
+
+.lightbox-media.is-zoomed {
+  place-items: start;
+  overflow: auto;
+}
+
+.lightbox-media.is-zoomed img {
+  width: 220%;
+  max-width: none;
+  max-height: none;
+  cursor: zoom-out;
+}
+
+.lightbox-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
+.lightbox-gallery img {
+  width: 100%;
+  height: auto;
+  max-height: 65vh;
+  object-fit: contain;
+  border-radius: calc(var(--radius-md) - 6px);
 }
 
 .lightbox-placeholder {
@@ -108,6 +148,25 @@ body.lightbox-open {
   margin-bottom: 8px;
 }
 
+.lightbox-content::-webkit-scrollbar {
+  width: 10px;
+}
+
+.lightbox-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.lightbox-content::-webkit-scrollbar-thumb {
+  background: rgba(15, 17, 26, 0.35);
+  border-radius: 999px;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+}
+
+.lightbox-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(15, 17, 26, 0.5);
+}
+
 @media (max-width: 700px) {
   .lightbox-content {
     padding: 32px 20px 20px;
@@ -115,6 +174,14 @@ body.lightbox-open {
 
   .lightbox-media {
     min-height: 240px;
+  }
+
+  .lightbox-media img {
+    max-height: 60vh;
+  }
+
+  .lightbox-gallery {
+    grid-template-columns: 1fr;
   }
 }
 

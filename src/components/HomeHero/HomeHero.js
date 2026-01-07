@@ -12,7 +12,9 @@ const HomeHero = () => (
           research, prototyping, and accessible UI to build products that
           reduce friction and build trust.
         </p>
-        <p className="note">Currently transitioning my professional name to Noah Rhodes.</p>
+        <p className="note">
+          Currently transitioning my professional name to Noah Blake Rhodes.
+        </p>
         <div className="hero-actions">
           <Link className="btn primary" to="/work">
             View projects
@@ -21,31 +23,26 @@ const HomeHero = () => (
             Let&apos;s talk
           </Link>
         </div>
-        <ul className="hero-tags">
-          <li>Accessibility research</li>
-          <li>React + UI</li>
-          <li>3D web experiments</li>
-        </ul>
       </div>
-      <div className="hero-card">
+      <div className="hero-card hero-card--philips">
         <div className="hero-card-header">
           <span className="pill">Internship</span>
           <span className="status-dot" aria-hidden="true"></span>
-          <span className="subtle">Philips | Health tech</span>
+          <span className="subtle">Philips | Internal webshop</span>
         </div>
-        <h2>Reimagining onboarding for connected care.</h2>
+        <h2>Improving product discovery for Philips Myshop.</h2>
         <p>
-          Mapped patient and clinician journeys to reduce setup friction and
-          designed accessible flows for a pilot concept.
+          Led UX/UI improvements for L2 category clarity, comparison, and
+          decision confidence for a 40-70+ audience.
         </p>
         <div className="hero-card-meta">
           <div>
             <span className="meta-label">Focus</span>
-            <span className="meta-value">Onboarding, accessibility</span>
+            <span className="meta-value">Product discovery, comparison</span>
           </div>
           <div>
             <span className="meta-label">Tools</span>
-            <span className="meta-value">Figma, FigJam, testing</span>
+            <span className="meta-value">Figma, FigJam, research</span>
           </div>
         </div>
         <Link className="text-link" to="/work#philips">

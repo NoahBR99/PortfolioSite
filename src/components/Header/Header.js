@@ -28,14 +28,8 @@ const Header = forwardRef(({ menuOpen, onToggleMenu, onCloseMenu }, ref) => (
             <Link to="/work" onClick={onCloseMenu}>
               Work
             </Link>
-            <Link to="/#process" onClick={onCloseMenu}>
-              Process
-            </Link>
             <Link to="/#about" onClick={onCloseMenu}>
               About
-            </Link>
-            <Link to="/#contact" onClick={onCloseMenu}>
-              Contact
             </Link>
           </nav>
         </div>

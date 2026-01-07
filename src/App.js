@@ -105,7 +105,6 @@ const App = () => {
       '(prefers-reduced-motion: reduce)'
     ).matches;
     const root = document.documentElement;
-    document.body.classList.add('loaded');
 
     let rafId = null;
 
@@ -212,6 +211,63 @@ const App = () => {
     });
 
     ScrollTrigger.refresh();
+
+    return () => ctx.revert();
+  }, [location.pathname]);
+
+  useEffect(() => {
+    if (location.pathname !== '/') {
+      return undefined;
+    }
+
+    const prefersReducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;
+    const homeRoot = document.querySelector('.home-page');
+
+    if (!homeRoot) {
+      return undefined;
+    }
+
+    const ctx = gsap.context(() => {
+      const q = gsap.utils.selector(homeRoot);
+      const copy = q('.hero-copy');
+      const card = q('.hero-card');
+      const targets = [...copy, ...card];
+
+      if (targets.length === 0) {
+        return;
+      }
+
+      if (prefersReducedMotion) {
+        gsap.set(targets, { autoAlpha: 1, clearProps: 'transform' });
+        return;
+      }
+
+      gsap.set(targets, { autoAlpha: 0 });
+      gsap.set(copy, { y: 24 });
+      gsap.set(card, { y: 32 });
+
+      gsap
+        .timeline()
+        .to(copy, {
+          autoAlpha: 1,
+          y: 0,
+          duration: 0.7,
+          ease: 'power3.out'
+        })
+        .to(
+          card,
+          {
+            autoAlpha: 1,
+            y: 0,
+            duration: 0.8,
+            ease: 'power3.out'
+          },
+          '-=0.35'
+        )
+        .set(targets, { clearProps: 'transform' });
+    }, homeRoot);
 
     return () => ctx.revert();
   }, [location.pathname]);

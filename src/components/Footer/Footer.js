@@ -9,13 +9,10 @@ const Footer = () => (
         <p>UX designer focused on accessibility and thoughtful front-end craft.</p>
       </div>
       <div className="footer-links">
-        <a href="https://www.linkedin.com" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/noah-b-r/" aria-label="LinkedIn">
           LinkedIn
         </a>
-        <a href="https://www.behance.net" aria-label="Behance">
-          Behance
-        </a>
-        <a href="https://github.com" aria-label="GitHub">
+        <a href="https://github.com/NoahBR99?tab=repositories" aria-label="GitHub">
           GitHub
         </a>
       </div>
